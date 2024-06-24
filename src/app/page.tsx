@@ -3,6 +3,7 @@ import Table from './components/Table'
 import { Variable } from './types/variable'
 
 async function getVariables(): Promise<Variable[]> {
+  // would abstract api logic out of components next
   const res = await fetch(
     'https://metadata.kreftregisteret.no/rest/v1/variables/:filtered?keyword=test'
   )
